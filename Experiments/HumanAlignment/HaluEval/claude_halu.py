@@ -91,6 +91,7 @@ if __name__ == '__main__':
                 if ans.lower() == each_data["output"].lower():
                     cnt = cnt + 1
                 # print(cnt)
+                
                 dump_jsonl({"input": input, "ground_truth": each_data['output'], "generation": ans}, save_dir)
             print({"Claude Accuracy:", cnt/35000})
 
